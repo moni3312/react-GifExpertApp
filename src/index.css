@@ -1,0 +1,45 @@
+ *{
+   font-family:Comic sans MS;
+  
+}
+
+body{
+  padding: 60px;
+}
+
+input{
+  color: gray;
+   font-size: 1.3rem;
+   width: 100%;
+}
+.card-grid{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.card{
+  background-color: white;
+  align-content: center;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+.card img{
+  max-height: 170px;
+}
+
+.fondo{
+  background-color: lightskyblue;
+}
+.titulo{
+  text-align: center;
+}
