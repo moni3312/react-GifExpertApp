@@ -10,7 +10,7 @@ export const AddCategory = ({setCategories}) => {
     }
 
     const handleSubmit = (e) =>{
-        e.preventDefault();
+        e.preventDefault();//para que no recargue la pagina
 
         if(inputValue.trim().length > 2){
         setCategories(cats => [inputValue, ...cats]);
@@ -20,6 +20,7 @@ export const AddCategory = ({setCategories}) => {
 
     return (
         <form onSubmit= {handleSubmit}>
+            <p>{inputValue}</p>
                 <input 
                     type="text"
                     placeholder= "Escriba el tema de su Gif....."

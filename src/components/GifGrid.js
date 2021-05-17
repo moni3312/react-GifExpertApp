@@ -1,11 +1,11 @@
 import {GifGridItem} from "./GifGridItem";
 import { useFetchGifs } from "../hooks/useFetchGifs"
-
+import PropTypes from "prop-types";
+ 
 export const GifGrid = ({category}) => {
 
     const {data:images, loading} = useFetchGifs(category);
 
- 
     return (
         <>
         <h3 className=" animate__animated animate__fadeIn">{category}</h3>
@@ -23,4 +23,7 @@ export const GifGrid = ({category}) => {
         </>
     )
 
+}
+GifGrid.propTypes = {
+    category: PropTypes.string.IsRequired 
 }
