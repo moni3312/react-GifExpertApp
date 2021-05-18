@@ -1,4 +1,4 @@
-import {GifGridItem} from "../components/GifGridItem";
+import {GifGridItem} from "../../components/GifGridItem";
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 

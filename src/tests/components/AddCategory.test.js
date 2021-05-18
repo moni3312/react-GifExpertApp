@@ -1,6 +1,5 @@
-import { getGIfs } from "../helpers/getGifs";
 import {shallow} from 'enzyme';
-import { AddCategory } from "../components/AddCategory";
+import { AddCategory } from "../../components/AddCategory";
 import toJson from "enzyme-to-json";
 
 describe('Pruebas en <AddCategory />', () =>{

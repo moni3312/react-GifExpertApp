@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { GifGrid } from '../components/GifGrid';
-import { useFetchGifs } from '../hooks/useFetchGifs';
-jest.mock('../hooks/useFetchGifs');
+import { GifGrid } from '../../components/GifGrid';
+import { useFetchGifs } from '../../hooks/useFetchGifs';
+jest.mock('../../hooks/useFetchGifs');
 
 describe('Pruebas en <GifGrid />',()=> {
     const category = 'hola';
@@ -26,13 +26,15 @@ describe('Pruebas en <GifGrid />',()=> {
         }]
         
         useFetchGifs.mockReturnValue({
-            data: [],
+            data: gifs,
             loading: false
         });
 
         const wrapper = shallow(<GifGrid category={category}/>);
-  
-        expect( wrapper).toMatchSnapshot();
+        
+        expect( wrapper.find('p').exists() ).toBe(false);
+        expect(wrapper.find('GifGridItem').length ).toBe(gifs.length); 
+
     });
 
 });
